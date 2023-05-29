@@ -1,11 +1,10 @@
 # Customer Analysis in the Marketing Strategy of Huawei: A Social Network Analysis Approach
 Social media analysis helps Huawei better understand their targeted audience, evaluate the impact of marketing campaigns and enhance their business. In this report, I used social network analysis techniques to study the Huawei's customer connecting pattern. This report is based on the data from Huawei Social Network Data on Kaggle platform. Data Link: https://www.kaggle.com/datasets/andrewlucci/huawei-social-network-data
 
-#### Exploratory Data Analysis
+### Exploratory Data Analysis
 I initialized the analysis by exploring the properties of these three platform, including  diameter, density, clustering coefficient and average degree.
 
-<div align="center">
-Network Fundamental Features
+#### Network Fundamental Features
 | Metric        | Facebook      | Instagram  | Twitter |
 | ------------- |:-------------:| -----:| --------:|
 | Number of Vertices | 1000 | 1000 | 1000 |
@@ -14,7 +13,7 @@ Network Fundamental Features
 | Density | 0.1004      |    0.0098 | 0.5011|
 | Clustering Coefficient | 0.1002      |    0.0083 | 	0.5012|
 | Average Degree | 	100.306  |   	9.866  | 	500.63 |
-</div>
+
 
 ![Degree Distribution of FBNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/1634416e-ee95-44d9-a0a7-0f1ece483fc7)
 
@@ -23,7 +22,7 @@ Network Fundamental Features
 ![Degree Distribution of TwitterNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/8fb47c95-fe7b-4c6f-9c1c-da2db5714da7)
 
 
-#### Centrality Analysis
+### Centrality Analysis
 Centrality Analysis aims to answer the question "What characterizes an important vertex?"  Between centrality measures the extent to which a node acts as a bridge or intermediary between other nodes in the network. Nodes with high betweenness centrality are those that lie on many of the shortest paths between pairs of other nodes. This can make them critical nodes in terms of network structure and function, as their removal can lead to the fragmentation or breakdown of the network. 
 
 ![Correlation of Betweenness Centrality and Degree Centrality  (Facebook)](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/3cfe59dc-b514-453c-8c30-e2eb3a2c2908)
@@ -40,7 +39,7 @@ Largest ego network is representative for the patterning of the social network i
 
 ![Largest Ego Network in TwitterNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/87289d85-8df4-4c38-9281-2a2a8d2fd828)
 
-#### Exponential Random Graph Models
+### Exponential Random Graph Models
 Before conducting the ERGM analysis, I used the **"rethnicity" package**  to predict the race of 1,000 users by their last names. According to the prediction results, out of 1,000 users, there are 502 Asian people, 166 Black people, 113 Hispanic people and 219 White people. Huawei, as a Chinese brand, has a large proportion of Asian users, so there are more comments on social media on topics related to Huawei products/services come from Asian consumers.
 
 ![Race Prediction for the Users](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/6e527106-151c-47a1-99ea-191933debf7c)
@@ -56,8 +55,8 @@ ERGM Results for InstagramNetwork
 ![ERGM Results for TwitterNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/3d486111-50d5-4721-9cea-88e9c010cbf1)
 ERGM Results for TwitterNetwork
 
-#### Conclusion
-Based on the analysis of network data from the three platforms, we could learn that the Twitter network and Facebook network are highly interconnected and there are many closely-knit communities within the Twitter network. Information spreads quickly in both communities, and because of the presence of close-knit communities, discussions about new products/services are very lively. Therefore, Twitter and Facebook are good platforms to promote information about the latest product/service launches, as well as events that have recently taken place. Twitter could be the best platform to launch a marketing campaign.
+### Conclusion
+Based on the analysis of network data from the three platforms, we could learn that the Twitter network and Facebook network are highly interconnected and there are many closely-knit communities within the Twitter network. Information spreads quickly in both communities, and because of the presence of close-knit communities, discussions about new products/services are very lively. Therefore, Twitter and Facebook are good platforms to promote information about the latest product/service launches, as well as events that have recently taken place. **Twitter could be the best platform to launch a marketing campaign. **
 
 Compared to users on Twitter and Facebook, the Instagram has the lowest clustering coefficient and the lowest average degree, indicating that it is a sparse and disconnected network. Information is less mobile on Instagram.
 According to the results of Exponential Random Graph Models, we found that race of an individual has an impact on the formation of edges between nodes. Specifically, on Instagram, the race of White has a negative impact on the number of his/her connections. On Twitter, the race of Black has a negative impact on the number of his/her connections. However, the formation of a tie is not based on whether two people are from the same race. Such results do not necessarily mean that the Huawei community on Twitter and Instagram is racially biased, because, as a Chinese brand with a strong national spirit, Huawei is also influenced by countries’ relations and the international situation. Moreover, the results are also influenced by the number of different ethnic users on different platforms. Future research could further validate the study's findings by controlling for these variables. 
