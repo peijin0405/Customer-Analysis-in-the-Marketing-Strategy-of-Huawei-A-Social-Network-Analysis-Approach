@@ -4,6 +4,8 @@ Social media analysis helps Huawei better understand their targeted audience, ev
 #### Exploratory Data Analysis
 I initialized the analysis by exploring the properties of these three platform, including  diameter, density, clustering coefficient and average degree.
 
+<div align="center">
+Network Fundamental Features
 | Metric        | Facebook      | Instagram  | Twitter |
 | ------------- |:-------------:| -----:| --------:|
 | Number of Vertices | 1000 | 1000 | 1000 |
@@ -12,6 +14,7 @@ I initialized the analysis by exploring the properties of these three platform, 
 | Density | 0.1004      |    0.0098 | 0.5011|
 | Clustering Coefficient | 0.1002      |    0.0083 | 	0.5012|
 | Average Degree | 	100.306  |   	9.866  | 	500.63 |
+</div>
 
 ![Degree Distribution of FBNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/1634416e-ee95-44d9-a0a7-0f1ece483fc7)
 
@@ -45,10 +48,13 @@ Before conducting the ERGM analysis, I used the **"rethnicity" package**  to pre
 Then, using race as the attributes of the network, I used ERGM to analyze the three platforms separately.
 
 ![ERGM Results for FacebookNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/acb36e93-e5b6-4100-9bfc-5435532f4c44)
+ERGM Results for FacebookNetwork
 
 ![ERGM Results for InstagramNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/a3dd93cd-1704-4151-aa68-5608953108ca)
+ERGM Results for InstagramNetwork
 
 ![ERGM Results for TwitterNetwork](https://github.com/peijin0405/Customer-Analysis-in-the-Marketing-Strategy-of-Huawei-A-Social-Network-Analysis-Approach/assets/89746479/3d486111-50d5-4721-9cea-88e9c010cbf1)
+ERGM Results for TwitterNetwork
 
 #### Conclusion
 Based on the analysis of network data from the three platforms, we could learn that the Twitter network and Facebook network are highly interconnected and there are many closely-knit communities within the Twitter network. Information spreads quickly in both communities, and because of the presence of close-knit communities, discussions about new products/services are very lively. Therefore, Twitter and Facebook are good platforms to promote information about the latest product/service launches, as well as events that have recently taken place. Twitter could be the best platform to launch a marketing campaign.
